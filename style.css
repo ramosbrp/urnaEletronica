@@ -25,6 +25,22 @@ body {
 
 .teclado {
     background-color: #403a3a;
-    width: 10px;
     margin-left: 30px;
+}
+
+.teclado--linha {
+    display: flex;
+
+}
+
+.teclado--botao {
+    width: 50px;
+    height: 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
