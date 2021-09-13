@@ -19,6 +19,10 @@ body {
     width: 500px;
     height: 320px;
     background: linear-gradient(to right, #e8e8e8, #c1c1c1);
+    border: 2px solid #555;
+    display: flex;
+    flex-flow: column;
+
 }
 
 .teclado {
@@ -67,4 +71,26 @@ body {
     /* Ajustes, pois o botão CONFIRMA é maior */
     width: 90px;
     height: 50px;
+}
+
+/* Tela */
+.d-1 {
+    flex: 1;
+    display: flex;
+
+}
+
+.d-1.left {
+    flex: 1;
+}
+
+.d-1-right {
+    width: 90px;
+}
+
+.d-2 {
+    height: 50px;
+    font-size: 14px;
+    border-top: 2px solid #000;
+    padding-left: 10px;
 }
