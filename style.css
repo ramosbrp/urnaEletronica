@@ -121,12 +121,28 @@ body {
     font-size: 25px;
 }
 
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
 .d-1-4 {
     flex: 1;
     line-height: 30px;
 }
 .d-1-right {
     width: 90px;
+}
+
+.d-1-image {
+    border: 1px solid #000;
+    background-color: #fff;
+
+}
+
+.d-1-image img {
+    width: 100%;
 }
 
 .d-2 {
