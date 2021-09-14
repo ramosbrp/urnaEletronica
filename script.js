@@ -15,6 +15,12 @@ let etapaAtual = 0;
 function comecarEtapa() {
     let etapa = etapas[etapaAtual];
 
+    let numeroHtml = '';
+
+    for (let i=0; i<etapa.numeros; i++) {
+        numeroHtml += '<div class="numero" ></div>';
+    }
+
     seuVotoPara.style.display = 'none';
     cargo.innerHTML = etapa.titulo;
     descricao.innerHTML = '';
@@ -23,7 +29,10 @@ function comecarEtapa() {
     numeros.innerHTML = numeroHtml;
 }
 
-// Funções
+function atualizaInterface() {
+    
+}
+
 function clicou(n) {
     alert(`clicou em: ${n}`)
 };
