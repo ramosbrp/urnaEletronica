@@ -16,9 +16,13 @@ function comecarEtapa() {
     let etapa = etapas[etapaAtual];
 
     let numeroHtml = '';
-
+    numero = '';
     for (let i=0; i<etapa.numeros; i++) {
-        numeroHtml += '<div class="numero" ></div>';
+        if(i===0) {
+            numeroHtml += '<div class="numero pisca" ></div>';
+        } else {
+            numeroHtml += '<div class="numero" ></div>';
+        }
     }
 
     seuVotoPara.style.display = 'none';
@@ -30,11 +34,18 @@ function comecarEtapa() {
 }
 
 function atualizaInterface() {
-    
+
 }
 
 function clicou(n) {
-    alert(`clicou em: ${n}`)
+    let elNumero = document.querySelector('.numero.pisca');
+    if(elNumero !==null) {
+        elNumero.innerHTML = n;
+        numero = `${numero}${n}`;
+
+        elNumero.classList.remove('pisca');
+        elNumero.nextElementSibling.classList.add('pisca');
+    }
 };
 
 function branco() {
