@@ -12,11 +12,16 @@ let numeros = document.querySelector('.d-1-3');
 
 
 let etapaAtual = 0;
+let numero = '';
+let branco = false;
+
 function comecarEtapa() {
     let etapa = etapas[etapaAtual];
 
     let numeroHtml = '';
     numero = '';
+
+
     for (let i=0; i<etapa.numeros; i++) {
         if(i===0) {
             numeroHtml += '<div class="numero pisca" ></div>';
@@ -59,7 +64,9 @@ function atualizaInterface() {
     } else {
         seuVotoPara.style.display = 'block';
         aviso.style.display = 'block';
-        descricao.innerHTML = '<div class = "aviso-grande pisca">VOTO NULO</div>'
+        descricao.innerHTML = `<div class = "aviso-grande pisca">
+                                    VOTO NULO
+                                </div>`;
     }
 
 };
@@ -77,20 +84,27 @@ function clicou(n) {
             // Adiciona o pisca ao próximo quadrado e permite digitar
             elNumero.nextElementSibling.classList.add('pisca');
         } else {
+            atualizaInterface();
         }
     }
 };
 
-function branco() {
-    alert(`clicou em: branco`)
+function funcBranco() {
+    if(numero === '') {
+        branco = true;
+        numeros.innerHTML = '';
+        aviso.style.display = 'block';
+        descricao.innerHTML = `<div class = "aviso-grande pisca">
+                                    VOTO EM BRANCO
+                                </div>`;
+    }
 };
 
 function corrige() {
-    alert('Clicou em: CORRIGE')
+    comecarEtapa();
 }
 
 function confirma() {
-   atualizaInterface();
 }
 
 comecarEtapa();
