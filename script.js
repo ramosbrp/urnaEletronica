@@ -56,6 +56,10 @@ function atualizaInterface() {
         }
 
         lateral.innerHTML = fotosHtml;
+    } else {
+        seuVotoPara.style.display = 'block';
+        aviso.style.display = 'block';
+        descricao.innerHTML = '<div class = "aviso-grande pisca">VOTO NULO</div>'
     }
 
 };
@@ -73,7 +77,6 @@ function clicou(n) {
             // Adiciona o pisca ao próximo quadrado e permite digitar
             elNumero.nextElementSibling.classList.add('pisca');
         } else {
-            atualizaInterface();
         }
     }
 };
@@ -87,7 +90,7 @@ function corrige() {
 }
 
 function confirma() {
-    alert('Clicou em: CONFIRMA')
+   atualizaInterface();
 }
 
 comecarEtapa();
