@@ -18,14 +18,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Urna eletrônica construída somente com HTML CSS e JavaSCript;
-Este projeto é apenas uma simulação para teste;
+- Urna eletrônica construída somente com HTML CSS e JavaSCript
+- Este projeto é apenas uma simulação para teste
 
 ## ⚙ Funcionalidades
 
-✔ Opçãoes de votar em candidatos;
-✔ Voto em branco e voto nulo;
-✔ Funcionalidade dos botões branco, corrige e confirma.
+- ✔ Opçãoes de votar em candidatos
+- ✔ Voto em branco e voto nulo
+- ✔ Funcionalidade dos botões branco, corrige e confirma
 
 ## Candidatos:
   Prefeito - 99, 84
